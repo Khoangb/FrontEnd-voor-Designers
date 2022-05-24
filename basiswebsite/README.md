@@ -1,5 +1,5 @@
 # Procesverslag
-**Auteur:** -jouw naam-
+**Auteur:** Balinh Khoang
 
 **De opdrachten:** [opdracht 1](opdracht1/index.html) en [opdracht 2](opdracht2/index.html)
 
@@ -14,9 +14,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
-  3. -...-
+  1. Font - Koulen
+     https://fonts.google.com/specimen/Koulen?query=Koulen
+
+  2. Codepen Oefeningen animeren
+     https://dlo.mijnhva.nl/d2l/le/content/324295/Home
+     
+  3. Light - Dark mode
+     https://codepen.io/ananyaneogi/pen/zXZyMP
 
 
 
