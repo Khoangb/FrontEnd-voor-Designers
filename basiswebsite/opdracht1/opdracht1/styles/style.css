@@ -1,0 +1,397 @@
+/* CSS Document */
+
+/**************/
+/* CSS REMEDY */
+/**************/
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+button,
+summary {
+	cursor: pointer;
+}
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+	/* startje */
+	--color-text: #111;
+	--color-background: #eee;
+
+	--uniqloRed: #ED1D24;
+	--fontWhite: #FFFFFF;
+
+	--animation1s: 1s;
+
+	--fillForward: forwards;
+	--fillBackward: backwards;
+
+	--legeContent: "";
+}
+
+[data-theme="dark"] {
+	--color-background: #292C35;
+}
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body {
+	color: var(--color-text);
+	background-color: var(--color-background);
+	transition: .5s;
+}
+
+/* jouw code */
+
+/*************/
+/* DARK MODE */
+/*************/
+div:first-of-type {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+label {
+	position: relative;
+	height: 34px;
+	width: 60px;
+}
+
+input {
+	display: none;
+}
+
+div:last-of-type {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transition: .5s;
+	border-radius: 34px;
+}
+
+div:last-of-type::before {
+	content: var(--legeContent);
+	background-color: var(--fontWhite);
+	border-radius: 50%;
+	position: absolute;
+	left: 4px;
+	bottom: 4px;
+	width: 26px;
+	height: 26px;
+	transition: .5s;
+}
+
+input:not(:checked) + div:last-of-type {
+    background-color: #292C35;
+}
+
+input:checked + div:last-of-type {
+	background-color: #66bb6a;
+}
+
+input:checked + div:last-of-type::before {
+	transform: translateX(26px);
+}
+
+
+/***************/
+/* UNIQLO LOGO */
+/***************/
+
+h1 {
+	color: var(--fontWhite);
+	background-color: var(--uniqloRed);
+	font-family: 'Koulen', 'Arial Narrow', Arial, sans-serif;
+
+	position: absolute;
+	display: flex;
+	flex-wrap: wrap;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 0 15px 0 15px;
+}
+
+/***************/
+/* LINKER MOUW */
+/***************/
+h1::before {
+	content: var(--legeContent);
+	background-color: var(--uniqloRed);
+	clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0 100%);
+
+	position: absolute;
+	left: -2.5em;
+	width: 50%;
+	height: 50%;
+
+	animation-name: leftFold;
+	animation-delay: .5s;
+	animation-duration: var(--animation1s);
+	animation-fill-mode: var(--fillForward);
+	animation-timing-function: ease-out;
+	transform-origin: right;
+}
+
+@keyframes leftFold {
+	0% {
+		transform: rotateY(0);
+	}
+
+	100% {
+		transform: rotateY(90deg);
+	}
+}
+
+
+/****************/
+/* RECHTER MOUW	*/
+/****************/
+h1::after {
+	content: var(--legeContent);
+	background-color: var(--uniqloRed);
+	clip-path: polygon(0 0, 75% 0, 100% 100%, 25% 100%);
+
+	position: absolute;
+	left: 5.4em;
+	width: 50%;
+	height: 50%;
+
+	animation-name: rightFold;
+	animation-delay: .5s;
+	animation-duration: var(--animation1s);
+	animation-fill-mode: var(--fillForward);
+	animation-timing-function: ease-out;
+	transform-origin: left;
+}
+
+@keyframes rightFold {
+	0% {
+		transform: rotateY(0);
+	}
+
+	100% {
+		transform: rotateY(90deg);
+	}
+}
+
+
+/*******************/
+/* ONDERKANT SHIRT */
+/*******************/
+span:nth-of-type(5)::before {
+	content: var(--legeContent);
+	background-color: var(--uniqloRed);
+	clip-path: polygon(100% 0%, 100% 100%, 0 100%, 0 0);
+
+	position: absolute;
+	left: 0;
+	bottom: -1.3em;
+	width: 100%;
+	height: 50%;
+
+	animation-name: bottomFold;
+	animation-delay: .5s;
+	animation-duration: var(--animation1s);
+	animation-fill-mode: var(--fillForward);
+	animation-timing-function: ease-out;
+	transform-origin: top;
+}
+
+@keyframes bottomFold {
+	0% {
+		transform: rotateX(0);
+	}
+
+	100% {
+		transform: rotateX(90deg);
+	}
+}
+
+
+/******************/
+/* UNIQLO LETTERS */
+/******************/
+span {
+	flex: 0 0 33.333333%;
+	text-align: center;
+	font-size: 2em;
+}
+
+/* ruimte tussen de letters horizontaal verminderen */
+span:first-of-type,
+:nth-of-type(2),
+:nth-of-type(3) {
+	margin-bottom: -40px;
+}
+
+
+/************/
+/* LETTER U */
+/************/
+span:first-of-type {
+	animation-name: uMove;
+	animation-delay: 1.5s;
+	animation-duration: var(--animation1s);
+	animation-fill-mode: var(--fillBackward);
+}
+
+@keyframes uMove {
+	0% {
+		transform: translateX(.8em);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0)
+	}
+}
+
+
+/************/
+/* LETTER N */
+/************/
+span:nth-of-type(2) {
+	animation-name: nGone;
+	animation-delay: 1.5s;
+	animation-duration: .5s;
+	animation-fill-mode: var(--fillBackward);
+}
+
+@keyframes nGone {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: .5;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+
+/************/
+/* LETTER I */
+/************/
+span:nth-of-type(3) {
+	animation-name: iMove;
+	animation-delay: 1.5s;
+	animation-duration: var(--animation1s);
+	animation-fill-mode: var(--fillBackward);
+}
+
+@keyframes iMove {
+	0% {
+		transform: translateX(-.91em);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(0)
+	}
+}
+
+
+/************/
+/* LETTER Q */
+/************/
+span:nth-of-type(4) {
+	animation-name: qMove;
+	animation-delay: 1.5s;
+	animation-duration: var(--animation1s);
+	animation-fill-mode: var(--fillBackward);
+}
+
+@keyframes qMove {
+	0% {
+		transform: translateX(.8em);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(0)
+	}
+}
+
+
+/*******************/
+/* LETTER Q STAART */
+/*******************/
+span:nth-of-type(4)::after {
+	content: var(--legeContent);
+	background-color: var(--fontWhite);
+	clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+	position: absolute;
+	top: 2.3em;
+	left: .7em;
+	width: .2em;
+	height: .2em;
+
+	animation-name: qTail;
+	animation-delay: 2.5s;
+	animation-duration: .5s;
+	animation-fill-mode: var(--fillBackward);
+	animation-timing-function: ease-in;
+}
+
+@keyframes qTail {
+	0% {
+		transform: translate(-5px, -5.5px);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(.1px, .1px)
+	}
+}
+
+
+/************/
+/* LETTER O */
+/************/
+span:last-of-type {
+	animation-name: oMove;
+	animation-delay: 1.5s;
+	animation-duration: var(--animation1s);
+	animation-fill-mode: var(--fillBackward);
+}
+
+@keyframes oMove {
+	0% {
+		transform: translateX(-.8em);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateX(0)
+	}
+}
