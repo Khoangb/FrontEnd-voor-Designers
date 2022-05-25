@@ -54,14 +54,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Je uitkomst - karakteristiek screenshot(s):
   <img src="readme-images/animatieStart.jpg" width="375px" alt="uitkomst opdracht 1 start van de animatie">
-  <img src="readme-images/animatieEnd.png" width="375px" alt="uitkomst opdracht 1 einde van de animatie">
+  <img src="readme-images/animatieEind.png" width="375px" alt="uitkomst opdracht 1 einde van de animatie">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
 
   <img src="readme-images/animatieStart.jpg" width="375px" alt="uitkomst opdracht 1 start van de animatie">
-  <img src="readme-images/animatieEnd.png" width="375px" alt="uitkomst opdracht 1 einde van de animatie">
+  <img src="readme-images/animatieEind.png" width="375px" alt="uitkomst opdracht 1 einde van de animatie">
   Ik heb geleerd hoe je losse onderdelen kan animeren en meerdere animatie acties in 1 actie zet.
   Verder was het animeren met css even een opfrisser in wat de mogelijkheden zijn. 
 
