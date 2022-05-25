@@ -53,15 +53,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/animatieStart" width="375px" alt="uitomst opdracht 1 start van de animatie">
-  <img src="readme-images/animatieEnd" width="375px" alt="uitomst opdracht 1 einde van de animatie">
+  <img src="readme-images/animatieStart.jpg" width="375px" alt="uitomst opdracht 1 start van de animatie">
+  <img src="readme-images/animatieEnd.png" width="375px" alt="uitomst opdracht 1 einde van de animatie">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/animatieStart" width="375px" alt="uitomst opdracht 1 start van de animatie">
-  <img src="readme-images/animatieEnd" width="375px" alt="uitomst opdracht 1 einde van de animatie">
+  <img src="readme-images/animatieStart.jpg" width="375px" alt="uitomst opdracht 1 start van de animatie">
+  <img src="readme-images/animatieEnd.png" width="375px" alt="uitomst opdracht 1 einde van de animatie">
   Ik heb geleerd hoe je losse onderdelen kan animeren en meerdere animatie acties in 1 actie zet.
   Verder was het animeren met css even een opfrisser in wat de mogelijkheden zijn. 
 
@@ -69,7 +69,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/animatieFail" width="375px" alt="niet gelukte animatie">
+  <img src="readme-images/animatieFail.png" width="375px" alt="niet gelukte animatie">
   Tijdens het maken van de animatie verplaatste de hele h1 zich zodra het bewoog. In de animatie wilde ik ook nog scale gebruiken en rotate. 
 </details>
 
