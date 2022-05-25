@@ -52,6 +52,13 @@ body {
 /*************/
 /* DARK MODE */
 /*************/
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-text: #eee;
+		--color-background: #292C35;
+	}
+}
+
 div:first-of-type {
 	display: flex;
 	align-items: center;
@@ -91,15 +98,15 @@ div:last-of-type::before {
 	transition: .5s;
 }
 
-input:not(:checked) + div:last-of-type {
-    background-color: #292C35;
+input:not(:checked)+div:last-of-type {
+	background-color: #292C35;
 }
 
-input:checked + div:last-of-type {
+input:checked+div:last-of-type {
 	background-color: #66bb6a;
 }
 
-input:checked + div:last-of-type::before {
+input:checked+div:last-of-type::before {
 	transform: translateX(26px);
 }
 
