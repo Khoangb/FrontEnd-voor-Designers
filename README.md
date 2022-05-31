@@ -82,13 +82,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/flowchart2" width="375px" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
+  - Javascript opfrissen
+  - Meer uitgebreide code toepassen voor Javascript (Meer dan alleen basis dingen)
   - nog een punt
   - ...
 </details>
