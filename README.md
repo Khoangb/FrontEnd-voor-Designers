@@ -132,17 +132,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
-
+  <img src="readme-images/opdracht2.png" width="375px" alt="uitkomst opdracht 2">
+  
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  Het maken en ontwerpen ging best prima. Het gebruiken van libaries was nieuw voor mij en erg handig om toe te passen.
+  <img src="readme-images/opdracht2.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+  Wat mij niet is gelukt was het gebruiken van pijltjes om door de gallerij te navigeren en bestanden verplaatsen. Vond het erg ingewikkeld.
+  Verder wou ik ook de foto's laten omdraaien en op de achterkant extra informatie toevoegen van de foto, maar dat lukte bij 1 afbeelding er vervolgens brak het de code. Ik heb hiervoor wat extra tijd nodig om uit te zoeken hoe dat precies werkt zonder mijn code te breken. 
+  <img src="readme-images/opdracht2.png" width="375px" alt="bummer">
 </details>
