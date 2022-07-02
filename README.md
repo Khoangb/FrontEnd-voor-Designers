@@ -101,23 +101,29 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na testen (week 7)</summary>
 
   Neem minimaal 5 bevindingen op:
-
+  1) Het schuif menu was niet in één keer duidelijk dat het om de pijltjes ging om het uit te schuiven.
+  2) Het was snel duidelijk dat het om drag & drop ging, dus de 'hint' was niet nodig. 
+  3) De hint zag er uit als een knop.
+  4) De scroll up knop was makkelijk te begrijpen
+  5) De filter knop met steden was duidelijk door de hover effecten (muis veranderde en de namen werden rood). 
 
 
   ### Bevinding 1:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  images/menu.png <img src="readme-images/menu.png  " width="375px" alt="filter menu opdracht 2">
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  Duidelijker maken dat het om het toetsenbord gaat met pijltjes. 
 
 
   ### Bevinding 2:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  images/menu.png <img src="readme-images/DnDcard.png  " width="375px" alt="drag&drop hint card"> 
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  
 
 
   ### Bevinding 3:
