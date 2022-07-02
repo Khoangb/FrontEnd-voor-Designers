@@ -110,7 +110,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevinding 1:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-  images/menu.png <img src="readme-images/menu.png  " width="375px" alt="filter menu opdracht 2">
+  <img src="readme-images/menu.png  " width="375px" alt="filter menu opdracht 2">
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
@@ -119,7 +119,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevinding 2:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-  images/menu.png <img src="readme-images/DnDcard.png  " width="375px" alt="drag&drop hint card"> 
+  <img src="readme-images/DnDcard.png" width="375px" alt="drag&drop hint card"> 
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
