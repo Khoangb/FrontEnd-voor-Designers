@@ -111,6 +111,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevinding 1:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
   <img src="readme-images/menu.png  " width="375px" alt="filter menu opdracht 2">
+  Het was niet in 1x duidelijk het het pijltje onderin het menu stond voor het gebruiken van de pijltjes op het toetsenbord.
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
@@ -119,11 +120,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Bevinding 2:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
-  <img src="readme-images/DnDcard.png" width="375px" alt="drag&drop hint card"> 
+  <img src="readme-images/DnDcard.png" width="175px" alt="drag&drop hint card"> 
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-  
+  NIet laten uitzien als een button of een interactie element
 
 
   ### Bevinding 3:
@@ -138,18 +139,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/opdracht2.jpg" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/phonedisplay.png" width="375px" alt="uitkomst opdracht 2 telefoon">
+  <img src="readme-images/desktopdisplay.png" width="375px" alt="uitkomst opdracht 2 desktop">
   
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
   Het maken en ontwerpen ging best prima. Het gebruiken van libaries was nieuw voor mij en erg handig om toe te passen.
-  <img src="readme-images/opdracht2.jpg" width="375px" alt="top">
+  <img src="readme-images/phonedisplay.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
   Wat mij niet is gelukt was het gebruiken van pijltjes om door de gallerij te navigeren en bestanden verplaatsen. Vond het erg ingewikkeld.
-  Verder wou ik ook de foto's laten omdraaien en op de achterkant extra informatie toevoegen van de foto, maar dat lukte bij 1 afbeelding er vervolgens brak het de code. Ik heb hiervoor wat extra tijd nodig om uit te zoeken hoe dat precies werkt zonder mijn code te breken. 
-  <img src="readme-images/opdracht2.jpg" width="375px" alt="bummer">
+  Verder wou ik ook de foto's laten omdraaien en op de achterkant extra informatie toevoegen van de foto, maar dat lukte bij 1 afbeelding.
+  Ik heb mijn tijd eerst gebruikt voor functies die ik wel aan de praat kreeg, en vervolgens alles netjes te maken. Hierdoor was er toch geen tijd om het goed uit te voeren.
+  <img src="readme-images/desktopdisplay.png" width="375px" alt="bummer">
 </details>
