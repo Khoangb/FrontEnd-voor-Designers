@@ -9,7 +9,6 @@
 		url('../fonts/eenfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-
 }
 
 
@@ -36,9 +35,10 @@ summary {
 	--main-color: #C70025;
 	--sub-color: #FF8484;
 	--color-text: #3A3A4D;
-	--highlight-color: White;
-	--background-color: #cccccc;
+	--background-color: #FFFFFF;
 	--shadow-color: #bfafb2;
+
+	--transition03s: .3s;
 }
 
 
@@ -48,7 +48,7 @@ summary {
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-text: #eee;
-		--color-background: #292C35;
+		--background-color: #292C35;
 	}
 }
 
@@ -65,84 +65,74 @@ body {
 	margin: 0;
 }
 
+/*****************/
+/* PHONE DISPLAY */
+/*****************/
 
-/*************/
-/* MAIN PAGE */
-/*************/
-
-h1 {
-	text-align: center;
-
-	padding: .5em;
-	margin-top: 0;
-	margin-bottom: 1.5em;
-
-	color: var(--hightlight-color);
-	background-color: var(--main-color);
+@media (min-width:24em) {
+	ul {
+		grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+	}
 }
-
 
 /*******/
 /* NAV */
 /*******/
 
 nav {
-	height: 12em;
+	background-color: var(--background-color);
 	text-align: center;
 	border-radius: .5em;
+	height: 12em;
 
+	position: sticky;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 
-	background-color: var(--highlight-color);
-	padding-bottom: 1px;
-	z-index: 1;
-	position: sticky;
 	top: 0;
+	z-index: 1;
 }
 
 nav::before {
-	position: absolute;
+	font-weight: normal;
+	text-align: center;
+
+	opacity: .25;
 	left: 0;
 	right: 0;
 	top: 0;
 	margin: 0;
-	font-size: .75em;
-	font-weight: normal;
-	text-align: center;
-	opacity: .25;
-	z-index: 9999;
+	z-index: 1;
 }
 
 nav section:first-of-type {
-	position: absolute;
+	background-image: linear-gradient(to right, var(--sub-color), var(--background-color));
+	box-shadow: 0 0 1em 0 var(--shadow-color);
+	border-radius: inherit;
 	width: 100%;
 	height: 100%;
+
+	position: absolute;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	background-image: linear-gradient(to right, var(--sub-color), var(--highlight-color));
-	border-radius: inherit;
+
 	transform: translateY(calc(-100% + 3em));
-	box-shadow: 0 0 1em 0 var(--shadow-color);
 	transition: .8s;
 }
 
-nav section:first-of-type.toonMenu {
-	transform: translateY(-3em);
+nav section:first-of-type.showMenu {
+	transform: translateY(-4em);
 }
+
 
 /*************************/
 /* ASIDE - RADIO BUTTONS */
 /*************************/
 
 aside {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-
-	background-color: var(--highlight-color);
+	background-color: var(--background-color);
 	box-shadow: inset 0.5px 0.5px 2px 0 var(--shadow-color);
 
 	margin: auto;
@@ -150,6 +140,10 @@ aside {
 	height: 3em;
 	border-radius: 10em;
 	margin-bottom: 3em;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 input[type="radio"] {
@@ -158,17 +152,19 @@ input[type="radio"] {
 }
 
 label {
+	color: var(--color-text);
+	background-color: inherit;
+	text-align: center;
 	font-size: 1em;
+	width: 70px;
+	height: 40px;
+	border-radius: 50em;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: inherit;
-	width: 70px;
-	height: 40px;
-	text-align: center;
-	border-radius: 50em;
-	transition: linear 0.3s;
-	color: var(--color-text);
+
+	transition: linear var(--transition03s);
 }
 
 label:hover {
@@ -178,27 +174,45 @@ label:hover {
 
 input[type="radio"]:checked+label {
 	background-color: var(--main-color);
-	color: var(--highlight-color);
-	transition: 0.3s;
+	color: var(--background-color);
 	font-weight: bold;
 }
 
 
-/**************/
-/* ARROW DOWN */
-/**************/
+/********************/
+/* LIST CHANGE VIEW */
+/********************/
+
+ul.tokyo li:not(.tokyo) {
+	display: none;
+}
+
+ul.kyoto li:not(.kyoto) {
+	display: none;
+}
+
+ul.osaka li:not(.osaka) {
+	display: none;
+}
+
+ul.rural li:not(.rural) {
+	display: none;
+}
+
+
+/**************************/
+/* ARROW DOWN IN THE MENU */
+/**************************/
 
 nav>section>span:first-of-type {
-	display: flex;
-	position: relative;
-	top: 5em;
-	left: -50%;
-	font-size: 1em;
-	transform: scale(1.5);
-	padding-bottom: 1em;
 	color: var(--main-color);
 	font-weight: bold;
+	font-size: 1.5em;
 
+	display: flex;
+	position: relative;
+	top: 2.9em;
+	left: -50%;
 }
 
 
@@ -206,19 +220,17 @@ nav>section>span:first-of-type {
 /* NAV TEXT */
 /************/
 
-section:nth-of-type(2)>h2 {
+h1 {
+	font-family: 'Koulen', sans-serif;
 	color: var(--main-color);
-	margin-top: 4em;
-}
-
-section:nth-of-type(2) > h2 > span{
-	background:#fff; 
-    padding:0 10px; 
+	font-size: 2em;
+	margin-top: 3em;
 }
 
 section:nth-of-type(2) p {
-	margin-top: -2em;
-	padding: 0 2em 0 2em;
+	max-width: 30em;
+	margin: -1.5em 0 3em 0;
+	padding: 0 1em 0 1em;
 }
 
 section:nth-of-type(2) span {
@@ -232,29 +244,30 @@ section:nth-of-type(2) span {
 
 /* de lijst met foto's */
 ul {
-	display: grid;
+	list-style: none;
 	grid-gap: 3em;
 	margin: 1em;
 	padding: 0 2em 2em;
-	list-style: none;
-	transition: left .5s cubic-bezier(0.820, 0.085, 0.395, 0.895);
+	display: grid;
 }
 
 li {
+	background-color: var(--background-color);
+	box-shadow: 0 0 .5em, .25em .25em .25em var(--shadow-color);
+	max-width: 30em;
+	padding: 1.5em 1.5em 0;
+
 	position: relative;
 	display: flex;
 	flex-direction: column-reverse;
 	justify-content: flex-end;
-	padding: 1.5em 1.5em 0;
 
-	background-color: var(--highlight-color);
-	box-shadow: 0 0 .5em, .25em .25em .25em var(--shadow-color);
-	max-width: 30em;
+	transition: var(--transition03s);
 	cursor: grab;
 }
 
 li:hover {
-	box-shadow: 0 0 20px rgba(50, 50, 50, .2);
+	box-shadow: 0 0 10px var(--sub-color);
 }
 
 /* de li's oppakken - drag & drop */
@@ -305,84 +318,56 @@ li:nth-of-type(9n+9) {
 
 /* titels van de foto's */
 h2 {
-	min-height: 3em;
-	margin: 1em;
-
+	font-family: 'Koulen', sans-serif;
+	text-align: center;
 	font-size: 1.3em;
 	line-height: 1em;
-	text-align: center;
+	min-height: 3em;
+	margin: 1em;
 }
 
 img {
-	display: block;
 	width: 100%;
 	height: auto;
+	display: block;
 }
 
-
-/*****************/
-/* PHONE DISPLAY */
-/*****************/
-
-@media (min-width:24em) {
-	ul {
-		grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-	}
-}
-
-
-/********************/
-/* LIST CHANGE VIEW */
-/********************/
-
-ul.tokyo li:not(.tokyo) {
-	display: none;
-}
-
-ul.kyoto li:not(.kyoto) {
-	display: none;
-}
-
-ul.osaka li:not(.osaka) {
-	display: none;
-}
-
-ul.rural li:not(.rural) {
-	display: none;
-}
 
 /********************/
 /* DRAG & DROP HINT */
 /********************/
 
 div:first-of-type {
-	background-color: var(--highlight-color);
-	box-shadow: var(--shadow-color) 0.5px 0.5px 2px 0;
+	background-color: var(--background-color);
 	height: 8em;
 	border-radius: .5em;
+
 	display: flex;
 	flex-direction: column;
 	position: fixed;
 	right: 1%;
 	bottom: 50%;
+
+	transition: .5s ease-in-out;
 }
 
 div:first-of-type img {
 	width: 3em;
-	position: fixed;
 	border-radius: .5em;
+	position: fixed;
 }
 
 div:first-of-type p:first-of-type {
 	color: var(--main-color);
+	transform: scale(0.8);
 	text-align: center;
 	width: 3em;
 	padding-top: 2.7em;
-	transform: scale(0.8);
+
 }
 
-div:first-of-type p:last-of-type{
-	color: var(--highlight-color); 
+div:first-of-type p:last-of-type {
+	color: var(--background-color);
 	text-align: center;
 	font-weight: 900;
 	margin-top: -5em;
@@ -392,15 +377,15 @@ div:first-of-type p:last-of-type{
 
 /* Wanneer er over de hint wordt gehovert */
 
-div:first-of-type:hover{
+div:first-of-type:hover {
 	background-color: var(--main-color);
-	transition: .5s;
 }
 
-div:first-of-type:hover p:last-of-type{
-	padding-top: 1.5em;
-	font-size: x-large;
+div:first-of-type:hover p:last-of-type {
+	padding-top: 2.3em;
+	font-size: 2em;
 	opacity: 1;
+
 	animation-name: arrowMove;
 	animation-duration: 1s;
 	animation-iteration-count: infinite;
@@ -409,12 +394,12 @@ div:first-of-type:hover p:last-of-type{
 }
 
 @keyframes arrowMove {
-	0%{
-		transform: translateX(10px);
+	0% {
+		transform: translateX(8px);
 	}
 
-	100%{
-		transform: translateX(-10px);
+	100% {
+		transform: translateX(-8px);
 	}
 }
 
@@ -423,12 +408,17 @@ div:first-of-type:hover p:last-of-type{
 /* ARROW UP BUTTON */
 /*******************/
 
-.up-arrow {
-	position: fixed;
-	right: 0.5%;
-	bottom: 3%;
-	cursor: pointer;
-
+i img {
 	width: 3em;
 	height: 2.5em;
+
+	position: fixed;
+	right: 1%;
+	bottom: 3%;
+	cursor: pointer;
+	transition: var(--transition03s) ease-out;
+}
+
+i img:hover {
+	opacity: .7;
 }

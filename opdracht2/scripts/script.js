@@ -1,6 +1,6 @@
-/********************/
-/* Moving Elements */
-/********************/
+/************************/
+/* MOVING LIST ELEMENTS */
+/************************/
 
 var options = {
   animation: 500
@@ -9,62 +9,9 @@ var options = {
 var theList = document.getElementById('list');
 var sortable = Sortable.create(theList, options);
 
-/***************************************************/
-
-/* listed items when grabbed move when up or down  */
-/* https://jsfiddle.net/joshyfrancis/pqb82wds/     */
-
-/***************************************************/
-
-// var autoscroll = function (offset, poffset, parentNode) {
-//     var xb = 0;
-//     var yb = 0;
-//     if (poffset.isBody == true) {
-//       var scrollLeft = poffset.scrollLeft;
-//       var scrollTop = poffset.scrollTop;
-//       var scrollbarwidth = (document.documentElement.clientWidth - document.body.offsetWidth); //All
-//       var scrollspeed = (offset.right + xb) - (poffset.right + scrollbarwidth);
-//       if (scrollspeed > 0) {
-//         this.scrollLeft(parentNode, scrollLeft + scrollspeed);
-//       }
-//       scrollspeed = offset.left - (xb);
-//       if (scrollspeed < 0) {
-//         this.scrollLeft(parentNode, scrollLeft + scrollspeed);
-//       }
-//       scrollspeed = (offset.bottom + yb) - (poffset.bottom);
-//       if (scrollspeed > 0) {
-//         this.scrollTop(parentNode, scrollTop + scrollspeed);
-//       }
-//       scrollspeed = offset.top - (yb);
-//       if (scrollspeed < 0) {
-//         this.scrollTop(parentNode, scrollTop + scrollspeed);
-//       }
-//     } else {
-//       var scrollLeft = offset.scrollLeft;
-//       var scrollTop = offset.scrollTop;
-//       var scrollbarwidth = parentNode.offsetWidth - parentNode.clientWidth; 
-//       var scrollbarheight = parentNode.offsetHeight - parentNode.clientHeight;
-//       var scrollspeed = (offset.right + xb) - (poffset.right - scrollbarwidth);
-//       if (scrollspeed > 0) {
-//         this.scrollLeft(parentNode, scrollLeft + scrollspeed);
-//       }
-//       scrollspeed = offset.left - (xb + poffset.left);
-//       if (scrollspeed < 0) {
-//         this.scrollLeft(parentNode, scrollLeft + scrollspeed);
-//       }
-//       scrollspeed = (offset.bottom + scrollbarheight + yb) - (poffset.bottom);
-//       if (scrollspeed > 0) {
-//         this.scrollTop(parentNode, scrollTop + scrollspeed);
-//       }
-//       scrollspeed = offset.top - (yb + poffset.top);
-//       if (scrollspeed < 0) {
-//         this.scrollTop(parentNode, scrollTop + scrollspeed);
-//       }
-//     }
-//   };
 
 /*********************/
-/* Radio button sort */
+/* RADIO BUTTON SORT */
 /*********************/
 
 var optionAll = document.querySelector("#filter-all");
@@ -74,10 +21,10 @@ var optionOsaka = document.querySelector("#filter-osaka");
 var optionRural = document.querySelector("#filter-rural");
 
 function filterList(event) {
-  let deLijst = document.querySelector("ul");
-  let nieuweFilter = event.target.value;
-  deLijst.className = "";
-  deLijst.classList.add(nieuweFilter);
+  let theList = document.querySelector("ul");
+  let newFilter = event.target.value;
+  theList.className = "";
+  theList.classList.add(newFilter);
 }
 
 optionAll.addEventListener("change", filterList);
@@ -87,32 +34,33 @@ optionOsaka.addEventListener("change", filterList);
 optionRural.addEventListener("change", filterList);
 
 
-/**********************/
-/* Menu down function */
-/**********************/
+/************************************/
+/* MENU DOWN FUNCTION WITH KEYBOARD */
+/************************************/
 
-function openMenuMetToetsen(event) {
+function openMenuWKeyboard(event) {
   let deNav = document.querySelector("nav section:first-of-type");
 
   switch (event.key) {
     case "ArrowDown":
-      deNav.classList.add("toonMenu");
+      deNav.classList.add("showMenu");
       break; /* break - zodat de andere toetsen niet onnodig gecheckt worden */
     case "ArrowUp":
-      deNav.classList.remove("toonMenu");
+      deNav.classList.remove("showMenu");
       break;
     case "Escape":
-      deNav.classList.remove("toonMenu");
+      deNav.classList.remove("showMenu");
       break;
   }
 }
 
-document.addEventListener('keydown', openMenuMetToetsen);
+document.addEventListener('keydown', openMenuWKeyboard);
 
-/*********************/
-/* Arrow up function */
-/*********************/
-let scrollUp = document.querySelector("#scroll-up");
+
+/****************************/
+/* ARROW UP - SCROLL BUTTON */
+/****************************/
+let scrollUp = document.querySelector("i");
 
 scrollUp.addEventListener("click", () => {
   window.scrollTo({
